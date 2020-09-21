@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  creationTimestamp: null
+  name: carts
+spec:
+  gateways:
+  - public-gateway.istio-system
+  - mesh
+  hosts:
+  - carts.litmus-chaos.34.122.140.188.nip.io
+  - carts
+  http:
+  - route:
+    - destination:
+        host: carts.litmus-chaos.svc.cluster.local
