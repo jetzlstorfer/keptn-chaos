@@ -1,0 +1,4 @@
+apiVersion: v2
+description: A Helm Chart for project litmus-umbrella
+name: litmus-umbrella
+version: 0.1.0
