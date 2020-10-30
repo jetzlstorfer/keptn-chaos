@@ -8,3 +8,5 @@ carts-generated:
   enabled: false
 helloservice:
   enabled: false
+helloservice-generated:
+  enabled: false
