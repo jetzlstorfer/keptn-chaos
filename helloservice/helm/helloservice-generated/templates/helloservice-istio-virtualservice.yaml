@@ -1,0 +1,16 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  creationTimestamp: null
+  name: helloservice
+spec:
+  gateways:
+  - public-gateway.istio-system
+  - mesh
+  hosts:
+  - helloservice.litmus-chaos.34.122.140.188.nip.io
+  - helloservice
+  http:
+  - route:
+    - destination:
+        host: helloservice.litmus-chaos.svc.cluster.local

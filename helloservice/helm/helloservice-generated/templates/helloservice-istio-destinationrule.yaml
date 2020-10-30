@@ -1,0 +1,7 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: DestinationRule
+metadata:
+  creationTimestamp: null
+  name: helloservice
+spec:
+  host: helloservice.litmus-chaos.svc.cluster.local
