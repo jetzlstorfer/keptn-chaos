@@ -24,9 +24,9 @@ spec:
         - name: PORT
           value: "9000"
        readinessProbe:
-        httpGet:
-          path: /
-          port: 9000
-        initialDelaySeconds: 30
-        periodSeconds: 10
-        timeoutSeconds: 15
+         httpGet:
+           path: /
+           port: 9000
+         initialDelaySeconds: 30
+         periodSeconds: 10
+         timeoutSeconds: 15
