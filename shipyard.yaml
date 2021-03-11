@@ -1,4 +1,40 @@
-stages:
-  - name: "chaos"
-    deployment_strategy: "direct"
-    test_strategy: "performance"
+apiVersion: spec.keptn.sh/0.2.0
+kind: Shipyard
+metadata:
+  name: ""
+spec:
+  stages:
+  - name: chaos
+    sequences:
+    - name: delivery
+      tasks:
+      - name: deployment
+        properties:
+          deploymentstrategy: direct
+      - name: test
+        properties:
+          teststrategy: performance
+      - name: evaluation
+        properties: null
+      - name: approval
+        properties:
+          pass: automatic
+          warning: automatic
+      - name: release
+        properties: null
+    - name: delivery-direct
+      tasks:
+      - name: deployment
+        properties:
+          deploymentstrategy: direct
+      - name: test
+        properties:
+          teststrategy: performance
+      - name: evaluation
+        properties: null
+      - name: approval
+        properties:
+          pass: automatic
+          warning: automatic
+      - name: release
+        properties: null
