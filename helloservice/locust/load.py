@@ -1,4 +1,4 @@
-from locust import HttpUser, between, task
+from locust import HttpUser, between, task, response
 
 
 class WebsiteUser(HttpUser):
@@ -10,7 +10,7 @@ class WebsiteUser(HttpUser):
 
     @task
     def health(self):
-        with self.client.get("/health") as response:
+        with self.client.get("/health", catch_response=True) as response:
             if response.status_code == 503:
                 response.success()
 
