@@ -11,6 +11,6 @@ class WebsiteUser(HttpUser):
     @task
     def health(self):
         with self.client.get("/health") as response:
-            if response.status_code == 404:
+            if response.status_code == 503:
                 response.success()
 
