@@ -1,2 +1,2 @@
 image: jetzlstorfer/hello-server:v0.1.1
-replicaCount: 1
+replicaCount: 3
