@@ -9,10 +9,10 @@ filter:
 objectives:
   - sli: "probe_success_percentage"
     key_sli: false
-    pass:             # pass if value is > 99%
+    pass:             # pass if value is >=95%
       - criteria:
           - ">=95"   
-    warning:          # if the probe success percentage is <98%, the result should be a warning
+    warning:          # warn if value is <95% and >=90%
       - criteria:
           - ">=90"
     weight: 1
